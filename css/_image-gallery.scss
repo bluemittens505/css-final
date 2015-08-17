@@ -1,24 +1,26 @@
 .image-gallery {
-	width: 100%;
-	box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
 
-	@media only screen and (min-width: $breakpoint) {
-		width: 80%;
-		margin: 0 auto;
-	}
+    @media only screen and (min-width: $breakpoint) {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-	h2 {
-		text-align: center;
-		font-size: 2em;
-		color: $gold;
-		text-transform: uppercase;
-		padding: $padding 0;
-	}
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        color: $gold;
+        text-transform: uppercase;
+        padding: $padding 0;
+    }
 
+    .gallery img {
+        display: block;
+        height: 11em;
+    }
 
-
-	.gallery img {
-		display: block;
-		height: 11em;
-	}
+    footer {
+        height: 10em;
+    }
 }

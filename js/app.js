@@ -1,4 +1,11 @@
+var $gallery = $('.gallery').flickity({
+  imagesLoaded: true,
+  percentPosition: false,
+  wrapAround: true
+});
+
 var menu = $("nav ul");
+
 $("#pull").on("click", function(e) {
   e.preventDefault();
   menu.slideToggle();
@@ -9,9 +16,21 @@ $(window).resize(function() {
   if ( w > 960 && menu.is(":hidden") ) {
     menu.removeAttr('style');
   }
+  if ( w > 960 ) {
+    $(".flickity-page-dots").show();
+  } else {
+    $(".flickity-page-dots").hide();
+  }
 });
 
 $(document).ready(function() {
+
+  var w = $(this).width();
+  if ( w > 960 ) {
+    $(".flickity-page-dots").show();
+  } else {
+    $(".flickity-page-dots").hide();
+  }
 
   $('#bbimages a').on('click', function() {
     $('#bbholder').attr('src',this.href);
@@ -57,8 +76,3 @@ $(document).ready(function() {
 
 });
 
-$('.gallery').flickity({
-  imagesLoaded: true,
-  percentPosition: false,
-  wrapAround: true,
-});
