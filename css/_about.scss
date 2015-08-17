@@ -1,0 +1,32 @@
+.about {
+	width: 100%;
+
+	@media only screen and (min-width: $breakpoint) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.content > ul {
+		width: 45%;
+		list-style: none;
+		color: $gold;
+		background: $black;
+		border: 1px solid $gold;
+		box-sizing: border-box;
+		border-radius: 1em;
+		padding: $padding/4 0;
+		margin: $margin*2 auto $margin auto;
+	}
+	li {
+		text-align: center;
+	}
+	li:nth-child(2) {
+		font-size: 1.5em;
+	}
+
+	p {
+		clear: both;
+		padding: $padding;
+		text-align: center;
+	}
+}

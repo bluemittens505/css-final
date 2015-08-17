@@ -1,0 +1,142 @@
+.dictionary {
+	width: 100%;
+
+	@media only screen and (min-width: $breakpoint) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	nav {
+		float: left;
+		width: 10%;
+		padding: $padding 0 0 $padding;
+		box-sizing: border-box;
+
+		ul {
+			list-style-type: none;
+		}
+		li a {
+			text-decoration: none;
+			background-color: $gray;
+			color: $blue;
+			text-align: center;
+			display: block;
+			border-radius: 0.1em;
+			width: 1em;
+			padding: $padding/12;
+		}
+		li:nth-child(even) a {
+			background-color: $lightgray;
+		}
+		li a:hover, li a:focus {
+			color: $white;
+		}
+		.a, .h, .s {
+			transform: rotate(5deg);
+			transform-origin: 0% 0%;
+		}
+		.b, .l, .t {
+			transform: rotate(-5deg);
+			transform-origin: 0% 0%;
+		}
+		.d, .m, .u {
+			transform: rotate(5deg);
+			transform-origin: 50% 0%;
+		}
+		.e, .p, .w {
+			transform: rotate(-5deg);
+			transform-origin: 0% 50%;
+		}
+		.f, .r, .y {
+			transform: rotate(5deg);
+			transform-origin: 50% 50%;
+		}
+
+		@media only screen and (min-width: $breakpoint) {
+			float: none;
+			width: 100%;
+			padding: 0;
+			box-sizing: content;
+
+			ul {
+				position: relative;
+				left: 12%;
+			}
+			li a {
+				position: absolute;
+				top: 1em;
+				font-size: 3em;
+				width: 0.88em;			
+				z-index: 0;
+				transition: all 0.4s linear;
+			}
+			li a:hover, li a:focus {
+				color: $blue;
+				transform: scale(1.1);
+				z-index: 100;
+			}
+			.a {left: 0.0em;}
+			.b {left: 0.8em;}
+			.d {left: 1.6em;}
+			.e {left: 2.4em;}
+			.f {left: 3.2em;}
+			.h {left: 4.0em;}
+			.l {left: 4.8em;}
+			.m {left: 5.6em;}
+			.p {left: 6.4em;}
+			.r {left: 7.2em;}
+			.s {left: 8.0em;}
+			.t {left: 8.8em;}
+			.u {left: 9.6em;}
+			.w {left: 10.4em;}
+			.y {left: 11.2em;}
+		}
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2em;
+		color: $gold;
+		text-transform: uppercase;
+		margin: $margin 0 0;
+
+		@media only screen and (min-width: $breakpoint) {
+			padding-bottom: 3em;
+		}
+	}
+
+	.content {
+		float: left;
+		width: 90%;
+
+		@media only screen and (min-width: $breakpoint) {
+			float: none;
+			width: 100%;
+		}
+
+		dl {
+			margin: 0 auto;
+			text-align: center;
+			padding: $padding;
+		}
+		dt {
+			margin: 0 auto;
+			padding: $padding/2;
+			font-weight: bold;
+		}
+		dd {
+			margin: 0 auto;
+			padding: $padding/4;
+		}
+
+		a.dtop {
+			text-decoration: none;
+			color: $blue;
+			display: block;
+			text-align: center;
+		}
+		a.dtop:hover, li a.dtop:focus {
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+	color: $darkgray;
+}
+
+.wrapper {
+	max-width: 60em;
+	margin: 0 auto;
+	background-color: $lightblue;
+}
+
+nav.master {
+	height: auto;
+	width: 100%;
+	background: $blue;
+	font-size: 1em;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+
+	ul {
+		display: none;
+	}
+	li {
+		display: inline;
+		width: 100%;
+		position: relative;
+	}
+	a {
+		display: inline-block;
+		width: 100%;
+		text-decoration: none;
+		text-align: left;
+		text-indent: 1.5rem;
+		color: $white;
+		background: $gray;
+		border-bottom: 1px solid $darkgray;
+		padding: $padding/2 $padding/2;
+	}
+	a:hover {
+		background: $darkgray;
+	}
+	#pull {
+		display: block;
+		background: $blue;
+		width: 100%;
+		position: relative;
+	}
+	#pull:after {
+		display: inline-block;
+		position: absolute;
+		right: 1em;
+		top: 0.5em;
+		content: "";
+		background: url(img/nav-icon.png) no-repeat;
+		width: 60px;
+		height: 40px;
+	}
+
+	@media only screen and (min-width: $breakpoint) {
+		ul {
+			display: block;
+			list-style: none;
+			max-width: 60em;
+			margin: 0 auto;
+		}
+		li {
+			float: left;
+			width: auto;
+		}
+		a {
+			text-align: center;
+			width: auto;
+			text-indent: 0;
+			background: $blue;
+			border-bottom: 0;
+		}
+		a:hover {
+			color: $darkgray;
+			background: $blue;
+		}
+		#pull {
+			display: none;
+		}
+	}
+}
+
+header {
+	background: $black;
+	padding-top: 2.5em;
+
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+}
+
+footer {
+	height: 5em;
+
+}
+
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/*.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+*/

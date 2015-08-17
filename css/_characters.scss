@@ -1,0 +1,64 @@
+.characters {
+	width: 100%;
+
+	@media only screen and (min-width: $breakpoint) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2em;
+		color: $gold;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		clear: both;
+		text-align: center;
+		padding: $padding 0 $padding/4;
+	}
+
+	.images {
+		float: left;
+
+		ul {
+			list-style-type: none;
+			text-align: center;
+		}
+		li {
+			padding: $padding/4 0;
+		}
+		a {
+			text-decoration: none;
+			color: $blue;
+		}
+		a:hover, a:focus {
+			color: $white;
+			background: $darkgray;
+			border-radius: 0.4em;
+			padding: $padding/6;
+		}
+	}
+	article:nth-child(even) .images {
+		float: right;
+	}
+
+	h3 + img {
+		float: left;
+	}
+	article:nth-child(even) h3 + img {
+		float: right;
+	}
+
+	img {
+		border: 0.4em solid $white;
+		box-shadow: 0.25em 0.25em 0.32em 0.2em $darkgray;
+		margin: $margin;
+		width: 144px;
+		height: 194px;
+	}
+	p {
+		padding: $padding/2;
+	}
+}
