@@ -106,12 +106,16 @@ footer.master {
 }
 footer.master h2 {
   text-align: center;
-  letter-spacing: 1em;
+}
+footer.master h2 a {
   color: #E6B800;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: 'Wire One', sans-serif;
   text-transform: uppercase;
-  padding-left: 1em;
+  text-decoration: none;
+}
+footer.master h2 a:hover {
+  color: #FFF;
 }
 
 .clear:after {
@@ -235,6 +239,7 @@ footer.master h2 {
 .dictionary nav li a {
   text-decoration: none;
   background-color: #8A8A99;
+  font-size: 1.5em;
   color: #000099;
   text-align: center;
   display: block;
@@ -274,6 +279,7 @@ footer.master h2 {
     width: 100%;
     padding: 0;
     box-sizing: content;
+    position: relative;
   }
   .dictionary nav ul {
     position: relative;

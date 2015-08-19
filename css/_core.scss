@@ -109,12 +109,18 @@ footer.master {
 
 	h2 {
 		text-align: center;
-		letter-spacing: 1em;
-		color: $gold;
-		font-size: 2em;
-		font-family: 'Wire One', sans-serif;
-		text-transform: uppercase;
-		padding-left: $padding;
+	
+		a {
+			color: $gold;
+			font-size: 1.5em;
+			font-family: 'Wire One', sans-serif;
+			text-transform: uppercase;
+			text-decoration: none;
+		
+			&:hover {
+				color: $white;
+			}
+		}
 	}
 }
 
